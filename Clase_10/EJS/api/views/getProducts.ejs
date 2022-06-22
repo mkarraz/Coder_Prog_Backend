@@ -1,0 +1,17 @@
+<% if(products.length) { %>
+    <h1>Current Products</h1><button onClick="window.location = '/'">Add Products</button>
+    <ul>
+    <% products.map(product => { %> 
+        <li>
+            Title: <%= product.title %> <br>
+            Price: <%= product.price %> <br>
+            <img style="width: 100px; height: 100px" src="<%=product.thumbnail%>"></img>
+        </li>
+        <br/>
+    <% }) %> 
+    </ul>
+<% } else { %> 
+    <h1>No products to show - Add a new product in Form</h1>
+    <br>
+    <a type="button" href="/">Add Products</a>
+<% } %>

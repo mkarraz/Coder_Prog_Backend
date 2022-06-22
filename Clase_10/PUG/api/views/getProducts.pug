@@ -1,0 +1,16 @@
+extends ./layouts/main.pug
+
+block content
+  h1 Current Products
+    button(type="submit" onClick="location.href='/'" style='margin-left: 30px;') Add Products
+
+  if products.length 
+    each item in products
+      ul
+        li(style='font-weight:bold;')=item.title
+        p Precio: #{item.price}
+        img(src=item.thumbnail alt='login' style='width:100px; height:100px; margin-bottom: 30px;')
+  else
+    h1 No products to show.
+
+  

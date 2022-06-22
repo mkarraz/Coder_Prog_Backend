@@ -1,0 +1,22 @@
+extends ./layouts/main.pug
+
+block content 
+    h1 Add new Product
+      button(type="submit" onClick="location.href='/products'" style='margin-left: 30px;') Check Products
+    form(action='/products' method='post')
+      | Title: 
+      input(type='text' name='title')
+      |     Price: 
+      input(type='number' name='price')
+      |           Image: 
+      input(type='text' name='thumbnail')
+      input(type='submit' value='Submit' style='margin-left: 30px;')
+    br
+    p  Example:
+    p
+      | Title: Globo Terráqueo
+      br
+      | Price: 345.67 
+      br
+      | Thumbnail: https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png
+    
