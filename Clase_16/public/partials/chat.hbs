@@ -1,0 +1,11 @@
+{{#each messagesArray}}
+
+  <div class='message'>
+    <span class='message-date d-flex'>
+      <strong class='userEmail'>{{email}}</strong>
+      <p class='chatDate'> [{{dateString}} {{time}}] :</p>
+      <em class='userMessage'> {{message}}</em>
+    </span>
+  </div>
+
+{{/each}}
